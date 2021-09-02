@@ -2,8 +2,8 @@
   "name": "test-component",
   "version": "0.0.0",
   "description": "test component library",
-  "main": "./index.js",
-  "module": "./index.js",
+  "main": "./core/index.js",
+  "module": "./core/index.js",
   "scripts": {
     "build": "tsc"
   },
