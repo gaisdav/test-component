@@ -1,1 +1,1 @@
-export *  from './Label/interfaces';
+export *  from './core/Label/interfaces';
