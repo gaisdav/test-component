@@ -4,7 +4,6 @@
   "description": "test component library",
   "main": "./index.js",
   "module": "./index.js",
-  "types": "./interfaces.d.ts",
   "scripts": {
     "build": "tsc"
   },
