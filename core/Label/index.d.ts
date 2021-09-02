@@ -1,3 +1,3 @@
-/// <reference types="react" />
+import { FC } from 'react';
 import { LabelProps } from './interfaces';
-export declare function Label({ type, children, ...props }: LabelProps): JSX.Element;
+export declare const Label: FC<LabelProps>;

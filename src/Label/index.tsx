@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { LabelProps } from './interfaces';
 import { StyledLabel } from './styles';
 
-export function Label({
+export const Label: FC<LabelProps> = ({
   type = 'default',
   children = '',
   ...props
-}: LabelProps) {
+}) => {
   return (
     <StyledLabel
       {...props}

@@ -22,7 +22,7 @@ var __rest = (this && this.__rest) || function (s, e) {
 };
 import React from 'react';
 import { StyledLabel } from './styles';
-export function Label(_a) {
+export var Label = function (_a) {
     var _b = _a.type, type = _b === void 0 ? 'default' : _b, _c = _a.children, children = _c === void 0 ? '' : _c, props = __rest(_a, ["type", "children"]);
     return (React.createElement(StyledLabel, __assign({}, props, { type: type }), children));
-}
+};
