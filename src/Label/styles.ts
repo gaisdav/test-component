@@ -39,7 +39,7 @@ export const ColorLabelVariants: LabelColorMapType = {
   `,
 };
 
-export const Label = styled(MiuTypography)<LabelProps>`
+export const StyledLabel = styled(MiuTypography)<LabelProps>`
   width: fit-content;
   display: flex;
   flex-direction: row;

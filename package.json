@@ -2,9 +2,9 @@
   "name": "test-component",
   "version": "1.0.0",
   "description": "test component library",
-  "main": "./lib/cjs/index.js",
-  "module": "./lib/esm/index.js",
-  "types": "./lib/esm/index.d.ts",
+  "main": "./core/index.js",
+  "module": "./core/index.js",
+  "types": "./core/index.d.ts",
   "scripts": {
     "build": "tsc"
   },

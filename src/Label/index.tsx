@@ -1,6 +1,6 @@
 import React from 'react';
-import { Label as MuiLabel } from './styles';
 import { LabelProps } from './interfaces';
+import { StyledLabel } from './styles';
 
 export function Label({
   type = 'default',
@@ -8,11 +8,11 @@ export function Label({
   ...props
 }: LabelProps) {
   return (
-    <MuiLabel
+    <StyledLabel
       {...props}
       type={type}
     >
       {children}
-    </MuiLabel>
+    </StyledLabel>
   );
 }
