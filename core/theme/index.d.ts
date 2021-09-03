@@ -150,5 +150,11 @@ declare module '@material-ui/core/FormControl' {
         large: true;
     }
 }
+declare module '@material-ui/core/Typography' {
+    interface TypographyPropsVariantOverrides {
+        body3: true;
+        subtitle3: true;
+    }
+}
 export declare const theme: import("@material-ui/core/styles").Theme;
 export {};

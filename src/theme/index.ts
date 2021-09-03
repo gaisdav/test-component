@@ -162,6 +162,13 @@ declare module '@material-ui/core/FormControl' {
   }
 }
 
+declare module '@material-ui/core/Typography' {
+  interface TypographyPropsVariantOverrides {
+    body3: true;
+    subtitle3: true;
+  }
+}
+
 export const theme = createTheme({
   custom: {
     lightTheme: {
