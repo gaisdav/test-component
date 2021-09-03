@@ -1,16 +1,12 @@
-import React from 'react';
+import React, { FC } from 'react';
 
 import { MatIcon } from './styles';
 
-interface Props {
+interface IIconProps {
   iconName?: string;
 }
 
-Icon.defaultProps = {
-  iconName: 'check',
-};
-
-export function Icon({ iconName }:Props) {
+export const Icon: FC<IIconProps> = ({ iconName= 'check' }) => {
   return (
     <MatIcon role="img">{iconName}</MatIcon>
   );

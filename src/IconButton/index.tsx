@@ -1,20 +1,20 @@
-import React from 'react';
+import React, { FC } from 'react';
 
 import { StyledIconButton } from './styles';
 
-interface Props {
+interface IIconButtonProps {
   assign?: 'outlined' | 'plain';
   size?: 'small' | 'medium' | 'large';
   onClick: () => void;
   startIcon?: JSX.Element;
 }
 
-export function IconButton({
+export const IconButton: FC<IIconButtonProps> = ({
   assign = 'outlined',
   size = 'small',
   onClick,
   startIcon,
-}:Props) {
+}) => {
   return (
     <StyledIconButton
       assign={assign}

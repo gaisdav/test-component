@@ -1,9 +1,6 @@
 import React from 'react';
 import { MatIcon } from './styles';
-Icon.defaultProps = {
-    iconName: 'check',
-};
-export function Icon(_a) {
-    var iconName = _a.iconName;
+export var Icon = function (_a) {
+    var _b = _a.iconName, iconName = _b === void 0 ? 'check' : _b;
     return (React.createElement(MatIcon, { role: "img" }, iconName));
-}
+};
