@@ -131,6 +131,7 @@ export interface CustomTheme {
   custom: {
     lightTheme: Mode;
     fontFamily: {
+      roboto: string;
       beelineIcons: string;
     };
     border: {
@@ -294,6 +295,7 @@ export const theme = createTheme({
       },
     },
     fontFamily: {
+      roboto: 'Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", "Helvetica Neue", sans-serif',
       beelineIcons: 'BeelineIcons',
     },
     border: {
