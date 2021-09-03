@@ -10,10 +10,10 @@ declare const ButtonColorVariants: {
     plain: import("styled-components").FlattenInterpolation<import("styled-components").ThemeProps<import("styled-components").DefaultTheme>>;
 };
 declare type BaseButtonProps = ButtonTypeMap['props'];
-interface Props extends BaseButtonProps {
+export interface IButtonProps extends BaseButtonProps {
     props?: {};
     assign?: keyof typeof ButtonColorVariants;
     size?: keyof typeof ButtonSizeVariants;
 }
-export declare const Button: import("styled-components").StyledComponent<import("@material-ui/core").ExtendButtonBase<ButtonTypeMap<{}, "button">>, import("styled-components").DefaultTheme, Props, never>;
+export declare const Button: import("styled-components").StyledComponent<import("@material-ui/core").ExtendButtonBase<ButtonTypeMap<{}, "button">>, import("styled-components").DefaultTheme, IButtonProps, never>;
 export {};

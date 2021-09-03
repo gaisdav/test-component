@@ -117,13 +117,13 @@ const ButtonColorVariants = {
 
 type BaseButtonProps = ButtonTypeMap['props'];
 
-interface Props extends BaseButtonProps {
+export interface IButtonProps extends BaseButtonProps {
   props?: {};
   assign?: keyof typeof ButtonColorVariants;
   size?: keyof typeof ButtonSizeVariants;
 }
 
-export const Button = styled(MuiButton)<Props>`
+export const Button = styled(MuiButton)<IButtonProps>`
   min-width: 40px;
   box-shadow: none;
   font-style: normal;
