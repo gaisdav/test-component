@@ -118,22 +118,22 @@ interface Mode {
         };
     };
 }
-declare module '@material-ui/core/styles/createTheme' {
-    interface CustomTheme {
-        custom: {
-            lightTheme: Mode;
-            fontFamily: {
-                beelineIcons: string;
-            };
-            border: {
-                radius8: string;
-                radius12: string;
-            };
-            pallete: {
-                primary: BasePalleteColor;
-            };
+export interface CustomTheme {
+    custom: {
+        lightTheme: Mode;
+        fontFamily: {
+            beelineIcons: string;
         };
-    }
+        border: {
+            radius8: string;
+            radius12: string;
+        };
+        pallete: {
+            primary: BasePalleteColor;
+        };
+    };
+}
+declare module '@material-ui/core/styles/createTheme' {
     interface Theme extends CustomTheme {
     }
     interface ThemeOptions extends CustomTheme {
