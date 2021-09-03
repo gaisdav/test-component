@@ -1,6 +1,5 @@
 import styled, { css } from 'styled-components';
-import { Button as MuiButton, ButtonClasses } from '@material-ui/core';
-import { CustomTheme } from '../theme';
+import { Button as MuiButton, ButtonTypeMap } from '@material-ui/core';
 
 const ButtonSizeVariants = {
   small: css`
@@ -116,7 +115,10 @@ const ButtonColorVariants = {
   `,
 };
 
-interface Props extends ButtonClasses {
+type BaseButtonProps = ButtonTypeMap['props'];
+
+interface Props extends BaseButtonProps {
+  props?: {};
   assign?: keyof typeof ButtonColorVariants;
   size?: keyof typeof ButtonSizeVariants;
 }
@@ -130,9 +132,9 @@ export const Button = styled(MuiButton)<Props>`
   letter-spacing: 0;
   text-align: center;
 
-  ${(props: CustomTheme) => css`
-    border-radius: ${props.custom.border.radius12};
-    color: ${props.custom.lightTheme.colors.typographyAndIcons.default.active};
+  ${({theme: {custom: {border, lightTheme}}}) => css`
+    border-radius: ${border.radius12};
+    color: ${lightTheme.colors.typographyAndIcons.default.active};
   `};
 
   .MuiButton-startIcon > *:first-child {
