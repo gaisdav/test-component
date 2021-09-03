@@ -119,7 +119,7 @@ interface Mode {
     };
 }
 declare module '@material-ui/core/styles/createTheme' {
-    interface Theme {
+    interface CustomTheme {
         custom: {
             lightTheme: Mode;
             fontFamily: {
@@ -134,11 +134,18 @@ declare module '@material-ui/core/styles/createTheme' {
             };
         };
     }
-    interface ThemeOptions extends Theme {
+    interface Theme extends CustomTheme {
+    }
+    interface ThemeOptions extends CustomTheme {
     }
 }
 declare module '@material-ui/core/TextField' {
     interface TextFieldPropsSizeOverrides {
+        large: true;
+    }
+}
+declare module '@material-ui/core/FormControl' {
+    interface FormControlPropsSizeOverrides {
         large: true;
     }
 }
