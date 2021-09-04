@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Tooltip as MuiTooltip } from '@material-ui/core';
+import { Tooltip as MuiTooltip, TooltipProps } from '@material-ui/core';
 
 export const Tooltip = styled(({ className, ...props }) => (
   <MuiTooltip {...props} classes={{ popper: className }} />
-))`
+))<TooltipProps>`
   & .MuiTooltip-tooltip {
     background: ${(props) => props.theme.custom.lightTheme.colors.background.inverse};
     border-radius: ${(props) => props.theme.custom.border.radius8};
