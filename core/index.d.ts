@@ -5,3 +5,4 @@ export { IconButton } from './IconButton';
 export { Typography } from './Typography';
 export { TextField } from './TextField';
 export { Banner } from './Banner';
+export { Tooltip } from './Tooltip';
