@@ -3,92 +3,124 @@ import { Button as MuiButton, ButtonTypeMap } from '@material-ui/core';
 
 const ButtonSizeVariants = {
   small: css`
-      padding: 8px 16px;
-      height: 36px;
-      .MuiButton-label {
-        font-size: 14px;
-        line-height: 20px;
-      }
+    padding: 4px 16px;
+
+    .MuiButton-label {
+      font-size: 14px;
+      line-height: 20px;
+    }
   `,
   medium: css`
-      padding: 13px 20px;
-      height: 48px;
-      .MuiButton-label {
-        font-size: 16px;
-        line-height: 22px;
-      }
+    padding: 13px 20px;
+    height: 48px;
+
+    .MuiButton-label {
+      font-size: 16px;
+      line-height: 22px;
+    }
   `,
   large: css`
-      padding: 16px 24px;
-      height: 56px;
-      .MuiButton-label {
-        font-size: 18px;
-        line-height: 24px;
-      }
+    padding: 16px 24px;
+    height: 56px;
+
+    .MuiButton-label {
+      font-size: 18px;
+      line-height: 24px;
+    }
   `,
 };
 
 const ButtonColorVariants = {
   contained: css`
-     ${({ theme: { custom: { lightTheme: { colors: { button: { backgroundColor }, typographyAndIcons } } } } }) => css`
+    ${({ theme: { custom: { lightTheme: { colors: { button: { backgroundColor }, typographyAndIcons } } } } }) => css`
       background-color: ${backgroundColor.contained.active};
       border: none;
+
       &:hover {
         box-shadow: none;
         background-color: ${backgroundColor.contained.hovered};
       }
+
       &:focus {
         box-shadow: none;
         background-color: ${backgroundColor.contained.focused};
       }
+
       &:active {
         background-color: ${backgroundColor.contained.pressed};
       }
+
       &:disabled {
         background-color: ${backgroundColor.contained.active};
       }
-     .MuiButton-label {
+
+      .MuiButton-label {
         color: ${typographyAndIcons.default.active};
-     }
+      }
     `};
   `,
   outlined: css`
-     ${({ theme: { custom: { lightTheme: { colors: { button: { backgroundColor, borderColor }, borders, typographyAndIcons } } } } }) => css`
-        border: 1px solid ${borders.border};
+    ${({
+         theme: {
+           custom: {
+             lightTheme: {
+               colors: {
+                 button: { backgroundColor, borderColor },
+                 borders,
+                 typographyAndIcons,
+               },
+             },
+           },
+         },
+       }) => css`
+      border: 1px solid ${borders.border};
+      background-color: ${backgroundColor.outlined.active};
+
+      &:hover {
+        box-shadow: none;
+        background-color: ${backgroundColor.outlined.hovered};
+        border-color: ${borderColor.outlined.hovered};
+      }
+
+      &:focus {
+        box-shadow: none;
+        background-color: ${backgroundColor.outlined.focused};
+        border-color: ${borderColor.outlined.focused};
+      }
+
+      &:active {
+        background-color: ${backgroundColor.outlined.pressed};
+        border-color: ${borderColor.outlined.pressed};
+      }
+
+      &:disabled {
         background-color: ${backgroundColor.outlined.active};
-        &:hover {
-          box-shadow: none;
-          background-color: ${backgroundColor.outlined.hovered};
-          border-color:  ${borderColor.outlined.hovered};
-        }
+        border-color: ${borderColor.outlined.active};
+      }
 
-        &:focus {
-          box-shadow: none;
-          background-color: ${backgroundColor.outlined.focused};
-          border-color:  ${borderColor.outlined.focused};
-        }
-
-        &:active {
-          background-color: ${backgroundColor.outlined.pressed};
-          border-color:  ${borderColor.outlined.pressed};
-        }
-
-        &:disabled {
-          background-color: ${backgroundColor.outlined.active};
-          border-color:  ${borderColor.outlined.active};
-        }
-
-       .MuiButton-label {
-          color: ${typographyAndIcons.default.active};
-          border-color:  ${borderColor.outlined.disabled};
-       }
-     `};
+      .MuiButton-label {
+        color: ${typographyAndIcons.default.active};
+        border-color: ${borderColor.outlined.disabled};
+      }
+    `};
   `,
   plain: css`
-    ${({ theme: { custom: { lightTheme: { colors: { button: { backgroundColor, borderColor }, typographyAndIcons } } } } }) => css`
+    ${({
+         theme: {
+           custom: {
+             lightTheme: {
+               colors: {
+                 button: { backgroundColor, borderColor },
+                 typographyAndIcons,
+               },
+             },
+           },
+         },
+       }) => css`
       border: none;
       background-color: ${backgroundColor.plain.active};
       color: ${typographyAndIcons.default.link};
+
       &:hover {
         background-color: ${backgroundColor.plain.hovered};
       }
@@ -132,21 +164,24 @@ export const Button = styled(MuiButton)<IButtonProps>`
   letter-spacing: 0;
   text-align: center;
 
-  ${({theme: {custom: {border, lightTheme}}}) => css`
+  ${({ theme: { custom: { border, lightTheme } } }) => css`
     border-radius: ${border.radius12};
     color: ${lightTheme.colors.typographyAndIcons.default.active};
   `};
 
   .MuiButton-startIcon > *:first-child {
     font-size: 24px;
-    padding-right: 8px;
+    margin-right: 8px;
   }
+
   .MuiButton-startIcon > div {
     text-transform: initial;
   }
+
   .MuiButton-startIcon {
     margin: 0;
   }
+
   &:disabled {
     opacity: 0.48;
   }
