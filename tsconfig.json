@@ -17,6 +17,6 @@
     "suppressImplicitAnyIndexErrors": true,
     "allowSyntheticDefaultImports": true
   },
-  "include": ["src"],
+  "include": ["src/components", "src/styled", "src/theme"],
   "exclude": ["node_modules", "core"]
 }
