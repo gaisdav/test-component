@@ -1,9 +1,8 @@
-import React from 'react';
+import { FC } from 'react';
 interface CounterProps {
     count?: number;
     type?: 'error' | 'warning';
     isError?: boolean;
-    children: React.ReactNode;
 }
-export declare const Counter: ({ count, type, isError, children, }: CounterProps) => JSX.Element;
+export declare const Counter: FC<CounterProps>;
 export {};

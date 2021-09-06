@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React, { FC, useCallback } from 'react';
 import { Tooltip } from '../Tooltip';
 import { Badge } from './styles';
 
@@ -6,14 +6,14 @@ interface CounterProps {
   count?: number;
   type?: 'error' | 'warning';
   isError?: boolean;
-  children: React.ReactNode;
 }
-export const Counter = ({
+
+export const Counter: FC<CounterProps> = ({
   count = 0,
   type = 'error',
   isError = false,
   children,
-}:CounterProps) => {
+}) => {
   const formatNumber = (value: number, isShowError: boolean) => {
     if (isShowError) {
       return '!';
