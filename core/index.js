@@ -1,8 +1,9 @@
-export { Label } from './Label';
+export { Banner } from './Banner';
 export { Button } from './Button';
+export { Counter } from './Counter';
 export { Icon } from './Icon';
 export { IconButton } from './IconButton';
-export { Typography } from './Typography';
+export { Label } from './Label';
 export { TextField } from './TextField';
-export { Banner } from './Banner';
 export { Tooltip } from './Tooltip';
+export { Typography } from './Typography';

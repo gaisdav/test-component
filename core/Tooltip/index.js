@@ -27,6 +27,9 @@ var __rest = (this && this.__rest) || function (s, e) {
 import React from 'react';
 import styled from 'styled-components';
 import { Tooltip as MuiTooltip } from '@material-ui/core';
+/**
+ * TODO не подсказываются атрибуты. Нжуно описать типы.
+ */
 export var Tooltip = styled(function (_a) {
     var className = _a.className, props = __rest(_a, ["className"]);
     return (React.createElement(MuiTooltip, __assign({}, props, { classes: { popper: className } })));

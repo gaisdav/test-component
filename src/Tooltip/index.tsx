@@ -2,6 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import { Tooltip as MuiTooltip, TooltipProps } from '@material-ui/core';
 
+/**
+ * TODO не подсказываются атрибуты. Нжуно описать типы.
+ */
 export const Tooltip = styled(({ className, ...props }) => (
   <MuiTooltip {...props} classes={{ popper: className }} />
 ))<TooltipProps>`
